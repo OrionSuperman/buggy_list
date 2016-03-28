@@ -1,6 +1,7 @@
+console.log('routes.js');
 var mongoose = require('mongoose');
-var Users = require('../controllers/users');
-var Bucketlists = require('../controllers/bucketlists');
+var Users = require('./../controllers/users');
+var Bucketlists = require('./../controllers/bucketlists');
 module.exports = function(app){
   //************RESTful routes for users************
 app.get('/users', Users.index);

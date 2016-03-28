@@ -1,3 +1,4 @@
+console.log('mongoose.js');
 // require this file in your server (so it loads your models)
 var mongoose = require('mongoose');
 var fs = require('fs');

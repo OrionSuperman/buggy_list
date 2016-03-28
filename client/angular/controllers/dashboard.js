@@ -1,3 +1,4 @@
+console.log('dashboard.js');
 app.controller('dashboard', ['$scope', 'sessionFactory', 'userFactory', 'bucketFactory', '$location', function($scope, sf, uf, bf, loc) {
   var _this = this;
   this.user = sf.getUser();
@@ -9,6 +10,7 @@ app.controller('dashboard', ['$scope', 'sessionFactory', 'userFactory', 'bucketF
 
   this.index = function(){uf.index(function(data){
       _this.users = data;
+      console.log("USERS IM LOOKING FOR");
       console.log(_this.users);
     });
   }

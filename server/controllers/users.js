@@ -1,3 +1,4 @@
+console.log('users.js');
 var mongoose =require('mongoose'),
 User =  mongoose.model('users');
 Bucketlist = mongoose.model('bucketlists');
@@ -49,15 +50,18 @@ function UserObj(){
       });
   };
   this.index = function(req,res){
+    console.log("Index on server side going out");
     var Users = User.find({}).populate({
     path: 'bucketlists',
     populate: { path: '_creator' }
   }).exec(function (err, data) {
         if (err) {
-        catch_errors(res,err);
+          console.log('THERE BE ERRORS IN THE INDEX');
+          catch_errors(res,err);
           return;
           }
           console.log(data);
+          res.json(data);
       });
   };
   this.showByVar = function(req,res){

@@ -1,3 +1,4 @@
+console.log('bucketFactory.js');
 app.factory('bucketFactory', ['$http', function($http) {
   var bucketFactory = {};
   bucketFactory.create = function(data, creator, callback){

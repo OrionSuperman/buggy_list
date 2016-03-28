@@ -1,3 +1,4 @@
+console.log('sessionFactory.js');
 app.factory('sessionFactory', ['$http', function($http) {
   var session_factory = {};
   var logged_in = {};

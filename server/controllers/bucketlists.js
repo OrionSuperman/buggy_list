@@ -1,5 +1,6 @@
+console.log('bucketlists.js');
 var mongoose = require('mongoose');
-var BucketList = mongoose.model('bucketlists');
+var BucketList = mongoose.model('bucketlists', []);
 
 var catch_errors = function(res,err){
   res.json({error:err});

@@ -1,3 +1,4 @@
+console.log('user.js');
 app.controller('user', ['$scope','userFactory','sessionFactory','bucketFactory', '$routeParams', function($scope, uf,sf,bf, rp) {
   console.log(rp.id);
   var _this = this;

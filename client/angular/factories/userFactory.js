@@ -1,6 +1,8 @@
-app.factory('usersFactory', ['$http', function($http) {
+console.log('userFactory.js');
+app.factory('userFactory', ['$http', function($http) {
   var uf = {};
   uf.index = function(callback){
+    console.log("INDEX GOING OUT");
     $http.get('/users').then(function(data){
       callback(data.data);
     });
